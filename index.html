@@ -6,18 +6,28 @@
     <title>Tailwind</title>
     <link rel="stylesheet" href="./public/output.css" />
   </head>
-
+  <!-- for reboot -->
   <!-- npx tailwindcss -i ./src/main.css -o ./public/output.css --watch -->
-  <!-- !heroicons for svg icon -->
+
+  <!-- help links -->
+  <!-- ?documentation https://tailwindcss.com/docs/installation -->
+  <!-- ?heroicons for svg icon -->
+
+  <!-- ! -->
+  (ниже) Смотреть в Header
+  <!-- ! -->
+  При риспонсиве используется mobile first(поэтому сначала адаптив для мобильных
+  устройств)
+  <!-- ! -->
 
   <body>
     <div class="max-w-screen-xl mx-auto">
       <!-- header -->
-      <header class="px-2 border-b-2 flex items-center justify-between">
+      <header class="px-2 border-b-2 flex items-center justify-between h-14">
         <!-- logo -->
         <a class="text-purple-900 font-bold" href="">NAME</a>
 
-        <nav class="flex items-center">
+        <nav class="md:flex items-center hidden">
           <!-- nav links  -->
           <ul class="flex">
             <!-- border-b border-transparent - что бы текст не прыгал  -->
@@ -41,6 +51,21 @@
             </ul>
           </div>
         </nav>
+
+        <button class="inline-block md:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+          </svg>
+        </button>
       </header>
 
       <!-- breadcrumbs -->
@@ -315,7 +340,7 @@
       </main>
 
       <!-- footer -->
-      <footer class="border-top-2 mt-10 py-10 px-2 border">
+      <footer class="mt-10 py-10 px-2 border-t-2">
         <div class="flex">
           <!-- block 1 -->
           <div class="w-2/5">
