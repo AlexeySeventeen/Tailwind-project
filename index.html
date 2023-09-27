@@ -13,12 +13,19 @@
   <!-- ?documentation https://tailwindcss.com/docs/installation -->
   <!-- ?heroicons for svg icon -->
 
+  <!-- !  (ниже) Смотреть в Header -->
+  <!-- ! При риспонсиве используется mobile first(поэтому сначала адаптив для мобильных устройств)-->
   <!-- ! -->
-  (ниже) Смотреть в Header
-  <!-- ! -->
-  При риспонсиве используется mobile first(поэтому сначала адаптив для мобильных
-  устройств)
-  <!-- ! -->
+
+  <!-- bg-gradient-to - куда пойдёт градиент -->
+  <!-- from/via/to - из какого в какой цвет илт какой посередине  -->
+  <!-- отлично работает с hover: -->
+  <!-- opacity можно задать через / рядом с цветом [0,100]  -->
+  <!-- object-cover - чтобы img уменьшалось как надо -->
+  <!-- transition - включает анимации -->
+  <!-- duration - продолжительность -->
+  <!-- ease- - type of animation -->
+  <!-- delay - delay -->
 
   <body>
     <div class="max-w-screen-xl mx-auto">
@@ -73,7 +80,9 @@
         <div class="overflow-y-auto py-4 whitespace-nowrap flex items-center">
           <!-- use basic class(heroicons) -->
           <!-- home svg -->
-          <a href="#" class="text-gray-500 hover:text-gray-900">
+          <a
+            href="#"
+            class="text-gray-500 hover:text-gray-900 transition-all duration-75">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -102,7 +111,11 @@
               d="M8.25 4.5l7.5 7.5-7.5 7.5" />
           </svg>
 
-          <a href="#" class="text-gray-500 hover:text-gray-900">News</a>
+          <a
+            href="#"
+            class="text-gray-500 hover:text-gray-900 transition-all duration-75"
+            >News</a
+          >
 
           <!-- arrow svg -->
           <svg
@@ -118,46 +131,60 @@
               d="M8.25 4.5l7.5 7.5-7.5 7.5" />
           </svg>
 
-          <a href="#" class="text-gray-500 hover:text-gray-900">Tech</a>
+          <a
+            href="#"
+            class="text-gray-500 hover:text-gray-900 transition-all duration-75"
+            >Tech</a
+>
         </div>
       </div>
 
       <!-- main news -->
-      <!-- bg-gradient-to - куда пойдёт градиент -->
-      <!-- from/via/to - из какого в какой цвет илт какой посередине  -->
-      <!-- отлично работает с hover: -->
-      <!-- opacity можно задать через / рядом с цветом [0,100]  -->
-      <div class="flex px-2 space-x-1">
+      <section class="lg:flex px-2 lg:space-x-1">
         <a
           href="#"
-          class="w-2/3 bg-gradient-to-r from-red-400 to-blue-600 hover:to-blue-400 h-96 mb-4 relative overflow-hidden inline-block rounded">
+          class="w-full lg:w-2/3 border hover:border-gray-400 bg-gradient-to-r from-red-400 to-blue-600 hover:to-blue-400 h-96 mb-4 relative overflow-hidden inline-block rounded transition-all duration-75">
+          <img
+            class="absolute t-0 l-0 object-cover w-full h-full z-0 hover:scale-110"
+            src="./img/firstBannerImg.jpg"
+            alt="img1" />
           <div class="absolute p-4 bottom-0 left-0 z-20">
             <h2 class="text-4xl font-semibold text-gray-100 leading-tight">
-              Lorem ipsum dolor sit amet consectetur adipisicing.
+              Why are Radiohead the best band ever?
             </h2>
           </div>
         </a>
 
         <a
           href="#"
-          class="w-1/3 bg-gradient-to-bl from-violet-600/80 via-blue-500 to-red-400 hover:via-blue-500/60 hover:to-red-600/60 h-96 mb-4 relative overflow-hidden inline-block rounded">
+          class="border border-gray-400 hover:border-gray-700 w-full lg:w-1/3 bg-gradient-to-bl from-violet-600/80 via-blue-500 to-red-400 hover:via-blue-500/60 hover:to-red-600/60 h-96 mb-4 relative overflow-hidden inline-block rounded transition-all duration-75">
+          <img
+            class="absolute t-0 l-0 object-cover w-full h-full z-0 hover:scale-110"
+            src="./img/secondBanner.jpg"
+            alt="img2" />
           <div class="absolute p-4 bottom-0 left-0 z-20">
-            <h2 class="text-4xl font-semibold text-gray-100 leading-tight">
-              Lorem ipsum dolor sit amet.
+            <h2 class="text-4xl font-semibold text-black leading-tight">
+              Radiohead: A Moon Shaped Pool Album Review
             </h2>
           </div>
         </a>
-      </div>
+      </section>
 
-      <main class="flex">
+      <!-- main part -->
+      <main class="lg:flex">
         <!-- left -->
-        <div class="w-2/3">
+        <div class="w-full lg:w-2/3">
           <!-- news -->
           <section class="px-2">
-            <a href="#" class="block mb-10">
-              <div class="flex">
+            <a href="#" class="block mb-6 ">
+              <div
+                class="items-center lg:flex border rounded-lg p-px border-gray-300 hover:border-gray-600 hover:bg-gray-200 transition-all duration-75">
+                <img
+                  class="w-full lg:w-52 h-52 rounded-md lg:mr-2 object-cover"
+                  src="./img/newsImg1.jpg"
+                  alt="newsImg1" />
                 <div>
-                  <h3 class="my-2 text-gray-700 font-semibold text-2xl">
+                  <h3 class="my text-gray-700 font-semibold text-2xl">
                     Lorem ipsum dolor sit amet, consectetur adipisicing.
                   </h3>
                   <p class="text-gray-700">
@@ -177,10 +204,15 @@
               </div>
             </a>
 
-            <a href="#" class="block mb-10">
-              <div class="flex">
+            <a href="#" class="block mb-6">
+              <div
+                class="lg:flex border rounded-lg p-px border-gray-300 hover:border-gray-600 hover:bg-gray-200 transition-all duration-75">
+                <img
+                  class="w-full lg:w-52 h-52 rounded-md lg:mr-2 object-cover"
+                  src="./img/newsImg2.jpg"
+                  alt="newsImg2" />
                 <div>
-                  <h3 class="my-2 text-gray-700 font-semibold text-2xl">
+                  <h3 class="text-gray-700 font-semibold text-2xl">
                     laboriosam magni vel commodi pattern medical value.
                   </h3>
                   <p class="text-gray-700">
@@ -198,9 +230,14 @@
             </a>
 
             <a href="#" class="block mb-10">
-              <div class="flex">
+              <div
+                class="lg:flex border rounded-lg p-px border-gray-300 hover:border-gray-600 hover:bg-gray-200 transition-all duration-75">
+                <img
+                  class="w-full lg:w-52 h-52 rounded-md lg:mr-2 object-cover"
+                  src="./img/newsImg3.jpg"
+                  alt="newsImg3" />
                 <div>
-                  <h3 class="my-2 text-gray-700 font-semibold text-2xl">
+                  <h3 class="text-gray-700 font-semibold text-2xl">
                     It is a long established fact distracted by the readable
                     content.
                   </h3>
@@ -212,13 +249,7 @@
                     Virginia, looked up one of the more obscure Latin words,
                     consectetur, from a Lorem Ipsum passage, and going through
                     the cites of the word in classical literature, discovered
-                    the undoubtable source. Lorem Ipsum comes from sections
-                    1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The
-                    Extremes of Good and Evil) by Cicero, written in 45 BC. This
-                    book is a treatise on the theory of ethics, very popular
-                    during the Renaissance. The first line of Lorem Ipsum,
-                    "Lorem ipsum dolor sit amet..", comes from a line in section
-                    1.10.32.
+                    the undoubtable source.
                   </p>
                 </div>
               </div>
@@ -258,7 +289,7 @@
           </div>
         </div>
         <!-- right -->
-        <div class="w-1/3 px-2">
+        <div class="w-full lg:w-1/3 px-2">
           <!-- hot topics -->
           <div>
             <h3 class="font-bold text-gray-700 my-4">POPULAR NEWS</h3>
@@ -341,9 +372,9 @@
 
       <!-- footer -->
       <footer class="mt-10 py-10 px-2 border-t-2">
-        <div class="flex">
+        <div class="md:flex">
           <!-- block 1 -->
-          <div class="w-2/5">
+          <div class="w-full mb-5 md:w-2/5">
             <div>
               <h6 class="font-semibold text-gray-700 mb-4">Company</h6>
               <ul>
@@ -354,7 +385,7 @@
           </div>
 
           <!-- block 2 -->
-          <div class="w-2/5">
+          <div class="w-full mb-5 md:w-2/5">
             <div>
               <h6 class="font-semibold text-gray-700 mb-4">Content</h6>
               <ul>
@@ -375,7 +406,7 @@
           </div>
 
           <!-- block 3 -->
-          <div class="w-1/5">
+          <div class="w-full mb-5 md:w-2/5">
             <div>
               <h6 class="font-semibold text-gray-700 mb-4">Contact us</h6>
               <ul class="flex items-center">
