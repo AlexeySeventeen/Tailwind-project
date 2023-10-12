@@ -1,36 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="" id="html">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tailwind</title>
+    <title>Tailwind study project</title>
     <link rel="stylesheet" href="./public/output.css" />
   </head>
-  <!-- for reboot -->
 
-  <!-- help links -->
-  <!-- ?documentation https://tailwindcss.com/docs/installation -->
-  <!-- ?heroicons for svg icon -->
-
-  <!-- !  (ниже) Смотреть в Header -->
-  <!-- ! При риспонсиве используется mobile first(поэтому сначала адаптив для мобильных устройств)-->
-  <!-- ! -->
-
-  <!-- bg-gradient-to - куда пойдёт градиент -->
-  <!-- from/via/to - из какого в какой цвет илт какой посередине  -->
-  <!-- отлично работает с hover: -->
-  <!-- opacity можно задать через / рядом с цветом [0,100]  -->
-  <!-- object-cover - чтобы img уменьшалось как надо -->
-  <!-- transition - включает анимации -->
-  <!-- duration - продолжительность -->
-  <!-- ease- - type of animation -->
-  <!-- delay - delay -->
-
-  <!-- todo Dark mode -->
-  <!-- todo customize classes -->
-
-  <!-- !customize with config grid-rows-layout -->
-  <!-- !customize with auto var grid-rows-[auto_1fr_auto] -->
   <body class="bg-white dark:bg-slate-800">
     <div class="max-w-screen-xl mx-auto grid h-screen grid-rows-layout">
       <!-- header -->
@@ -65,6 +41,22 @@
               </li>
             </ul>
           </div>
+
+          <button id="darkMode">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-8 h-8 ml-1">
+              <path
+                class="dark:fill-yellow-400"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+            </svg>
+          </button>
         </nav>
 
         <button class="inline-block md:hidden">
@@ -87,7 +79,6 @@
         <!-- breadcrumbs -->
         <div class="px-2 flex items-center">
           <div class="overflow-y-auto py-4 whitespace-nowrap flex items-center">
-            <!-- use basic class(heroicons) -->
             <!-- home svg -->
             <a
               href="#"
@@ -181,7 +172,7 @@
 
         <!-- main part -->
         <main class="lg:flex">
-          <!-- left -->
+          <!-- left part -->
           <div class="w-full lg:w-2/3">
             <!-- news -->
             <section class="px-2">
@@ -301,7 +292,7 @@
               </ul>
             </div>
           </div>
-          <!-- right -->
+          <!-- right part -->
           <div class="w-full lg:w-1/3 px-2">
             <!-- hot topics -->
             <div>
@@ -369,10 +360,6 @@
             <!-- divider -->
             <div class="border border-dotted mt-2"></div>
 
-            <!-- rounded - border-radius -->
-            <!-- w-full - width:100% -->
-            <!-- text-lg - увеличение текста -->
-
             <!-- subscribe -->
             <div>
               <h5 class="font-bold text-lg text-gray-700 my-2 dark:text-white">
@@ -381,7 +368,6 @@
               <p class="text-gray-600 mb-4 dark:text-gray-300">
                 Subscribe to our newsletter
               </p>
-              <!-- !!! чтобы что-то делать с border, её нужно сначала обозначить -->
               <input
                 placeholder="Write your email"
                 type="email"
@@ -428,10 +414,7 @@
                   <a class="footer-link" href="#">Policy</a>
                 </li>
                 <li>
-                  <!-- decoration - для стилизации подчёркиваний -->
-                  <a class="footer-link decoration-wavy" href="#"
-                    >Documentation</a
-                  >
+                  <a class="footer-link" href="#">Documentation</a>
                 </li>
               </ul>
             </div>
@@ -500,4 +483,12 @@
       </footer>
     </div>
   </body>
+
+  <script>
+    const btn = document.querySelector('#darkMode');
+    const html = document.querySelector('#html');
+    btn.addEventListener('click', () => {
+      html.classList.toggle('dark');
+    });
+  </script>
 </html>
