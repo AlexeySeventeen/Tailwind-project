@@ -1241,6 +1241,33 @@ video {
   background-color: rgb(55 48 163 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-gray-200:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-gray-600:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(75 85 99 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-gray-300:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-gray-300\/30:hover {
+  background-color: rgb(209 213 219 / 0.3);
+}
+
+.hover\:bg-gray-300\/50:hover {
+  background-color: rgb(209 213 219 / 0.5);
+}
+
+.hover\:bg-gray-300\/5:hover {
+  background-color: rgb(209 213 219 / 0.05);
+}
+
 .hover\:via-blue-500\/60:hover {
   --tw-gradient-to: rgb(59 130 246 / 0)  var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), rgb(59 130 246 / 0.6) var(--tw-gradient-via-position), var(--tw-gradient-to);
@@ -1327,6 +1354,10 @@ video {
 :is(.dark .dark\:hover\:bg-gray-400:hover) {
   --tw-bg-opacity: 1;
   background-color: rgb(156 163 175 / var(--tw-bg-opacity));
+}
+
+:is(.dark .dark\:hover\:bg-gray-200\/50:hover) {
+  background-color: rgb(229 231 235 / 0.5);
 }
 
 :is(.dark .dark\:hover\:text-gray-100:hover) {
