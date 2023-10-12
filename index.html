@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="./public/output.css" />
   </head>
   <!-- for reboot -->
-  <!-- npx tailwindcss -i ./src/main.css -o ./public/output.css --watch -->
 
   <!-- help links -->
   <!-- ?documentation https://tailwindcss.com/docs/installation -->
@@ -30,14 +29,18 @@
   <!-- todo Dark mode -->
   <!-- todo customize classes -->
 
-  <!-- !customize with config -->
-  <body class="bg-white dark:bg-slate-900 grid-rows-layout">
-    <!-- !customize with auto var -->
-    <div class="max-w-screen-xl mx-auto grid-rows-[auto_1fr_auto]">
+  <!-- !customize with config grid-rows-layout -->
+  <!-- !customize with auto var grid-rows-[auto_1fr_auto] -->
+  <body class="bg-white dark:bg-slate-800">
+    <div class="max-w-screen-xl mx-auto grid h-screen grid-rows-layout">
       <!-- header -->
       <header class="px-2 border-b-2 flex items-center justify-between h-14">
         <!-- logo -->
-        <a class="text-purple-900 font-bold" href="">NAME</a>
+        <a
+          class="text-purple-800 hover:text-purple-700 font-bold text-2xl dark:text-purple-700 dark:hover:text-purple-600"
+          href=""
+          >NAME</a
+        >
 
         <nav class="md:flex items-center hidden">
           <!-- nav links  -->
@@ -80,300 +83,320 @@
         </button>
       </header>
 
-      <!-- breadcrumbs -->
-      <div class="px-2 flex items-center">
-        <div class="overflow-y-auto py-4 whitespace-nowrap flex items-center">
-          <!-- use basic class(heroicons) -->
-          <!-- home svg -->
-          <a
-            href="#"
-            class="text-gray-500 hover:text-gray-900 transition-all duration-75">
+      <div>
+        <!-- breadcrumbs -->
+        <div class="px-2 flex items-center">
+          <div class="overflow-y-auto py-4 whitespace-nowrap flex items-center">
+            <!-- use basic class(heroicons) -->
+            <!-- home svg -->
+            <a
+              href="#"
+              class="text-gray-500 hover:text-gray-900 transition-all duration-75 dark:text-gray-400 dark:hover:text-gray-100">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-5 h-5">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+              </svg>
+            </a>
+
+            <!-- arrow svg -->
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="w-5 h-5">
+              class="w-5 h-5 text-gray-400 dark:text-gray-500">
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                d="M8.25 4.5l7.5 7.5-7.5 7.5" />
             </svg>
+
+            <a
+              href="#"
+              class="text-gray-500 hover:text-gray-900 transition-all duration-75 dark:text-gray-400 dark:hover:text-gray-100"
+              >News</a
+            >
+
+            <!-- arrow svg -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-5 h-5 text-gray-400 dark:text-gray-500">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+
+            <a
+              href="#"
+              class="text-gray-500 hover:text-gray-900 transition-all duration-75 dark:text-gray-400 dark:hover:text-gray-100"
+              >Tech</a
+            >
+          </div>
+        </div>
+
+        <!-- main news -->
+        <section class="lg:flex px-2 lg:space-x-1">
+          <a
+            href="#"
+            class="w-full lg:w-2/3 border hover:border-gray-400 bg-gradient-to-r from-red-400 to-blue-600 hover:to-blue-400 h-96 mb-4 relative overflow-hidden inline-block rounded transition-all duration-75">
+            <img
+              class="absolute t-0 l-0 object-cover w-full h-full z-0 hover:scale-110"
+              src="./img/firstBannerImg.jpg"
+              alt="img1" />
+            <div class="absolute p-4 bottom-0 left-0 z-20">
+              <h2 class="text-4xl font-semibold text-gray-100 leading-tight">
+                Why are Radiohead the best band ever?
+              </h2>
+            </div>
           </a>
 
-          <!-- arrow svg -->
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-5 h-5 text-gray-400">
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-          </svg>
-
           <a
             href="#"
-            class="text-gray-500 hover:text-gray-900 transition-all duration-75"
-            >News</a
-          >
+            class="border border-gray-400 hover:border-gray-700 w-full lg:w-1/3 bg-gradient-to-bl from-violet-600/80 via-blue-500 to-red-400 hover:via-blue-500/60 hover:to-red-600/60 h-96 mb-4 relative overflow-hidden inline-block rounded transition-all duration-75">
+            <img
+              class="absolute t-0 l-0 object-cover w-full h-full z-0 hover:scale-105"
+              src="./img/secondBanner.jpg"
+              alt="img2" />
+            <div class="absolute p-4 bottom-0 left-0 z-20">
+              <h2 class="text-4xl font-semibold text-black leading-tight">
+                Radiohead: A Moon Shaped Pool Album Review
+              </h2>
+            </div>
+          </a>
+        </section>
 
-          <!-- arrow svg -->
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-5 h-5 text-gray-400">
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-          </svg>
+        <!-- main part -->
+        <main class="lg:flex">
+          <!-- left -->
+          <div class="w-full lg:w-2/3">
+            <!-- news -->
+            <section class="px-2">
+              <a href="#" class="block mb-2">
+                <div
+                  class="items-center lg:flex border rounded-lg p-px border-gray-300 hover:border-gray-600 hover:bg-gray-200/50 transition-all duration-75 dark:border-gray-600 dark:hover:border-white">
+                  <img
+                    class="w-full lg:w-52 h-52 rounded-md lg:mr-2 object-cover"
+                    src="./img/newsImg1.jpg"
+                    alt="newsImg1" />
+                  <div>
+                    <h3
+                      class="text-gray-700 font-semibold text-2xl dark:text-white">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing.
+                    </h3>
+                    <p class="text-gray-700 dark:text-gray-300">
+                      It is a long established fact that a reader will be
+                      distracted by the readable content of a page when looking
+                      at its layout. The point of using Lorem Ipsum is that it
+                      has a more-or-less normal distribution of letters, as
+                      opposed to using 'Content here, content here', making it
+                      look like readable English. Many desktop publishing
+                      packages and web page editors now use Lorem Ipsum as their
+                      default model text, and a search for 'lorem ipsum' will
+                      uncover many web sites still in their infancy. Various
+                      versions have evolved over the years, sometimes by
+                      accident, sometimes on purpose (injected humour and the
+                      like).
+                    </p>
+                  </div>
+                </div>
+              </a>
 
-          <a
-            href="#"
-            class="text-gray-500 hover:text-gray-900 transition-all duration-75"
-            >Tech</a
-          >
-        </div>
+              <a href="#" class="block mb-2">
+                <div
+                  class="lg:flex border rounded-lg p-px border-gray-300 hover:border-gray-600 hover:bg-gray-200/50 transition-all duration-75 dark:border-gray-600 dark:hover:border-white">
+                  <img
+                    class="w-full lg:w-52 h-52 rounded-md lg:mr-2 object-cover"
+                    src="./img/newsImg2.jpg"
+                    alt="newsImg2" />
+                  <div>
+                    <h3
+                      class="text-gray-700 font-semibold text-2xl dark:text-white">
+                      laboriosam magni vel commodi pattern medical value.
+                    </h3>
+                    <p class="text-gray-700 dark:text-gray-300">
+                      Ratione porro eaque explicabo quo quibusdam libero
+                      laboriosam magni vel commodi a nostrum dolore numquam,
+                      consequatur deserunt consequuntur minima temporibus aut
+                      nihil eius. Nesciunt fuga vero, accusantium temporibus
+                      cumque saepe ea ipsum eveniet quae quia numquam magnam
+                      aperiam, molestias doloribus libero harum quo earum
+                      quisquam sapiente eaque corrupti. Laudantium quae
+                      consequatur voluptate vitae nobis!
+                    </p>
+                  </div>
+                </div>
+              </a>
+
+              <a href="#" class="block mb-6">
+                <div
+                  class="lg:flex border rounded-lg p-px border-gray-300 hover:border-gray-600 hover:bg-gray-200/50 transition-all duration-75 dark:border-gray-600 dark:hover:border-white">
+                  <img
+                    class="w-full lg:w-52 h-52 rounded-md lg:mr-2 object-cover"
+                    src="./img/newsImg3.jpg"
+                    alt="newsImg3" />
+                  <div>
+                    <h3
+                      class="text-gray-700 font-semibold text-2xl dark:text-white">
+                      It is a long established fact distracted by the readable
+                      content.
+                    </h3>
+                    <p class="text-gray-700 dark:text-gray-300">
+                      Contrary to popular belief, Lorem Ipsum is not simply
+                      random text. It has roots in a piece of classical Latin
+                      literature from 45 BC, making it over 2000 years old.
+                      Richard McClintock, a Latin professor at Hampden-Sydney
+                      College in Virginia, looked up one of the more obscure
+                      Latin words, consectetur, from a Lorem Ipsum passage, and
+                      going through the cites of the word in classical
+                      literature, discovered the undoubtable source.
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </section>
+
+            <!-- pagination -->
+            <div>
+              <ul class="flex justify-center">
+                <li>
+                  <a class="pagination-item rounded-l-lg" href="#">Previous</a>
+                </li>
+                <li>
+                  <a class="pagination-item" href="#">1</a>
+                </li>
+                <li>
+                  <a class="pagination-item" href="#">2</a>
+                </li>
+                <!-- special item -->
+                <li>
+                  <a
+                    class="pagination-item text-blue-600 hover:bg-blue-100 dark:text-blue-400 dark:hover:bg-gray-400"
+                    href="#"
+                    >3</a
+                  >
+                </li>
+                <li>
+                  <a class="pagination-item" href="#">4</a>
+                </li>
+                <li>
+                  <a class="pagination-item" href="#">5</a>
+                </li>
+                <li>
+                  <a class="pagination-item rounded-r-lg" href="#">Next</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- right -->
+          <div class="w-full lg:w-1/3 px-2">
+            <!-- hot topics -->
+            <div>
+              <h3 class="font-bold text-gray-700 my-2 dark:text-white">
+                POPULAR NEWS
+              </h3>
+
+              <div
+                class="border border-dotted border-transparent hover:border-y-gray-400">
+                <a href="#" class="flex justify-between items-center px-1 py-2">
+                  <div class="flex items-center space-x-1">
+                    <div
+                      class="w-4 h-4 bg-gradient-to-tr from-green-300 to-green-600"></div>
+                    <div class="text-gray-800 dark:text-gray-300">Vue</div>
+                  </div>
+                  <div class="text-gray-600 font-thin dark:text-gray-300">
+                    23 article
+                  </div>
+                </a>
+              </div>
+
+              <div
+                class="border border-dotted border-transparent hover:border-y-gray-400">
+                <a href="#" class="flex justify-between items-center px-1 py-2">
+                  <div class="flex items-center space-x-1">
+                    <div
+                      class="w-4 h-4 bg-gradient-to-tr from-blue-300 to-blue-600"></div>
+                    <div class="text-gray-800 dark:text-gray-300">React</div>
+                  </div>
+                  <div class="text-gray-600 font-thin dark:text-gray-300">
+                    20 article
+                  </div>
+                </a>
+              </div>
+
+              <div
+                class="border border-dotted border-transparent hover:border-y-gray-400">
+                <a href="#" class="flex justify-between items-center px-1 py-2">
+                  <div class="flex items-center space-x-1">
+                    <div
+                      class="w-4 h-4 bg-gradient-to-tr from-orange-300 to-orange-600"></div>
+                    <div class="text-gray-800 dark:text-gray-300">Svelte</div>
+                  </div>
+                  <div class="text-gray-600 font-thin dark:text-gray-300">
+                    15 article
+                  </div>
+                </a>
+              </div>
+
+              <div
+                class="border border-dotted border-transparent hover:border-y-gray-400">
+                <a href="#" class="flex justify-between items-center px-1 py-2">
+                  <div class="flex items-center space-x-1">
+                    <div
+                      class="w-4 h-4 bg-gradient-to-tr from-red-300 to-red-600"></div>
+                    <div class="text-gray-800 dark:text-gray-300">Angular</div>
+                  </div>
+                  <div class="text-gray-600 font-thin dark:text-gray-300">
+                    7 article
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- divider -->
+            <div class="border border-dotted mt-2"></div>
+
+            <!-- rounded - border-radius -->
+            <!-- w-full - width:100% -->
+            <!-- text-lg - увеличение текста -->
+
+            <!-- subscribe -->
+            <div>
+              <h5 class="font-bold text-lg text-gray-700 my-2 dark:text-white">
+                SUBSCRIBE
+              </h5>
+              <p class="text-gray-600 mb-4 dark:text-gray-300">
+                Subscribe to our newsletter
+              </p>
+              <!-- !!! чтобы что-то делать с border, её нужно сначала обозначить -->
+              <input
+                placeholder="Write your email"
+                type="email"
+                class="w-full bg-gray-100 p-2 rounded-t border border-gray-100 hover:border-gray-500" />
+              <button
+                class="w-full p-2 rounded-b text-white bg-indigo-600 hover:bg-indigo-800">
+                Subscribe
+              </button>
+            </div>
+
+            <!-- divider -->
+            <div class="border border-dotted mt-2"></div>
+          </div>
+        </main>
       </div>
-
-      <!-- main news -->
-      <section class="lg:flex px-2 lg:space-x-1">
-        <a
-          href="#"
-          class="w-full lg:w-2/3 border hover:border-gray-400 bg-gradient-to-r from-red-400 to-blue-600 hover:to-blue-400 h-96 mb-4 relative overflow-hidden inline-block rounded transition-all duration-75">
-          <img
-            class="absolute t-0 l-0 object-cover w-full h-full z-0 hover:scale-110"
-            src="./img/firstBannerImg.jpg"
-            alt="img1" />
-          <div class="absolute p-4 bottom-0 left-0 z-20">
-            <h2 class="text-4xl font-semibold text-gray-100 leading-tight">
-              Why are Radiohead the best band ever?
-            </h2>
-          </div>
-        </a>
-
-        <a
-          href="#"
-          class="border border-gray-400 hover:border-gray-700 w-full lg:w-1/3 bg-gradient-to-bl from-violet-600/80 via-blue-500 to-red-400 hover:via-blue-500/60 hover:to-red-600/60 h-96 mb-4 relative overflow-hidden inline-block rounded transition-all duration-75">
-          <img
-            class="absolute t-0 l-0 object-cover w-full h-full z-0 hover:scale-110"
-            src="./img/secondBanner.jpg"
-            alt="img2" />
-          <div class="absolute p-4 bottom-0 left-0 z-20">
-            <h2 class="text-4xl font-semibold text-black leading-tight">
-              Radiohead: A Moon Shaped Pool Album Review
-            </h2>
-          </div>
-        </a>
-      </section>
-
-      <!-- main part -->
-      <main class="lg:flex">
-        <!-- left -->
-        <div class="w-full lg:w-2/3">
-          <!-- news -->
-          <section class="px-2">
-            <a href="#" class="block mb-6">
-              <div
-                class="items-center lg:flex border rounded-lg p-px border-gray-300 hover:border-gray-600 hover:bg-gray-200 transition-all duration-75">
-                <img
-                  class="w-full lg:w-52 h-52 rounded-md lg:mr-2 object-cover"
-                  src="./img/newsImg1.jpg"
-                  alt="newsImg1" />
-                <div>
-                  <h3 class="my text-gray-700 font-semibold text-2xl">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing.
-                  </h3>
-                  <p class="text-gray-700">
-                    It is a long established fact that a reader will be
-                    distracted by the readable content of a page when looking at
-                    its layout. The point of using Lorem Ipsum is that it has a
-                    more-or-less normal distribution of letters, as opposed to
-                    using 'Content here, content here', making it look like
-                    readable English. Many desktop publishing packages and web
-                    page editors now use Lorem Ipsum as their default model
-                    text, and a search for 'lorem ipsum' will uncover many web
-                    sites still in their infancy. Various versions have evolved
-                    over the years, sometimes by accident, sometimes on purpose
-                    (injected humour and the like).
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            <a href="#" class="block mb-6">
-              <div
-                class="lg:flex border rounded-lg p-px border-gray-300 hover:border-gray-600 hover:bg-gray-200 transition-all duration-75">
-                <img
-                  class="w-full lg:w-52 h-52 rounded-md lg:mr-2 object-cover"
-                  src="./img/newsImg2.jpg"
-                  alt="newsImg2" />
-                <div>
-                  <h3 class="text-gray-700 font-semibold text-2xl">
-                    laboriosam magni vel commodi pattern medical value.
-                  </h3>
-                  <p class="text-gray-700">
-                    Ratione porro eaque explicabo quo quibusdam libero
-                    laboriosam magni vel commodi a nostrum dolore numquam,
-                    consequatur deserunt consequuntur minima temporibus aut
-                    nihil eius. Nesciunt fuga vero, accusantium temporibus
-                    cumque saepe ea ipsum eveniet quae quia numquam magnam
-                    aperiam, molestias doloribus libero harum quo earum quisquam
-                    sapiente eaque corrupti. Laudantium quae consequatur
-                    voluptate vitae nobis!
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            <a href="#" class="block mb-10">
-              <div
-                class="lg:flex border rounded-lg p-px border-gray-300 hover:border-gray-600 hover:bg-gray-200 transition-all duration-75">
-                <img
-                  class="w-full lg:w-52 h-52 rounded-md lg:mr-2 object-cover"
-                  src="./img/newsImg3.jpg"
-                  alt="newsImg3" />
-                <div>
-                  <h3 class="text-gray-700 font-semibold text-2xl">
-                    It is a long established fact distracted by the readable
-                    content.
-                  </h3>
-                  <p class="text-gray-700">
-                    Contrary to popular belief, Lorem Ipsum is not simply random
-                    text. It has roots in a piece of classical Latin literature
-                    from 45 BC, making it over 2000 years old. Richard
-                    McClintock, a Latin professor at Hampden-Sydney College in
-                    Virginia, looked up one of the more obscure Latin words,
-                    consectetur, from a Lorem Ipsum passage, and going through
-                    the cites of the word in classical literature, discovered
-                    the undoubtable source.
-                  </p>
-                </div>
-              </div>
-            </a>
-          </section>
-
-          <!-- pagination -->
-          <div>
-            <ul class="flex justify-center">
-              <li>
-                <a class="pagination-item rounded-l-lg" href="#">Previous</a>
-              </li>
-              <li>
-                <a class="pagination-item" href="#">1</a>
-              </li>
-              <li>
-                <a class="pagination-item" href="#">2</a>
-              </li>
-              <!-- special item -->
-              <li>
-                <a
-                  class="pagination-item text-blue-600 hover:bg-blue-100"
-                  href="#"
-                  >3</a
-                >
-              </li>
-              <li>
-                <a class="pagination-item" href="#">4</a>
-              </li>
-              <li>
-                <a class="pagination-item" href="#">5</a>
-              </li>
-              <li>
-                <a class="pagination-item rounded-r-lg" href="#">Next</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- right -->
-        <div class="w-full lg:w-1/3 px-2">
-          <!-- hot topics -->
-          <div>
-            <h3 class="font-bold text-gray-700 my-4">POPULAR NEWS</h3>
-
-            <div
-              class="border border-dotted border-transparent hover:border-y-gray-400">
-              <a href="#" class="flex justify-between items-center px-1 py-2">
-                <div class="flex items-center space-x-1">
-                  <div
-                    class="w-4 h-4 bg-gradient-to-tr from-green-300 to-green-600"></div>
-                  <div class="text-gray-800">Vue</div>
-                </div>
-                <div class="text-gray-600 font-thin">23 article</div>
-              </a>
-            </div>
-
-            <div
-              class="border border-dotted border-transparent hover:border-y-gray-400">
-              <a href="#" class="flex justify-between items-center px-1 py-2">
-                <div class="flex items-center space-x-1">
-                  <div
-                    class="w-4 h-4 bg-gradient-to-tr from-blue-300 to-blue-600"></div>
-                  <div class="text-gray-800">React</div>
-                </div>
-                <div class="text-gray-600 font-thin">20 article</div>
-              </a>
-            </div>
-
-            <div
-              class="border border-dotted border-transparent hover:border-y-gray-400">
-              <a href="#" class="flex justify-between items-center px-1 py-2">
-                <div class="flex items-center space-x-1">
-                  <div
-                    class="w-4 h-4 bg-gradient-to-tr from-orange-300 to-orange-600"></div>
-                  <div class="text-gray-800">Svelte</div>
-                </div>
-                <div class="text-gray-600 font-thin">15 article</div>
-              </a>
-            </div>
-
-            <div
-              class="border border-dotted border-transparent hover:border-y-gray-400">
-              <a href="#" class="flex justify-between items-center px-1 py-2">
-                <div class="flex items-center space-x-1">
-                  <div
-                    class="w-4 h-4 bg-gradient-to-tr from-red-300 to-red-600"></div>
-                  <div class="text-gray-800">Angular</div>
-                </div>
-                <div class="text-gray-600 font-thin">7 article</div>
-              </a>
-            </div>
-          </div>
-
-          <!-- divider -->
-          <div class="border border-dotted mt-2"></div>
-
-          <!-- rounded - border-radius -->
-          <!-- w-full - width:100% -->
-          <!-- text-lg - увеличение текста -->
-
-          <!-- subscribe -->
-          <div>
-            <h5 class="font-bold text-lg text-gray-700 mb-2">SUBSCRIBE</h5>
-            <p class="text-gray-600 mb-4">Subscribe to our newsletter</p>
-            <!-- !!! чтобы что-то делать с border, её нужно сначала обозначить -->
-            <input
-              placeholder="Write your email"
-              type="email"
-              class="w-full bg-gray-100 p-2 rounded-t border border-gray-100 hover:border-gray-500" />
-            <button
-              class="w-full p-2 rounded-b text-white bg-indigo-600 hover:bg-indigo-800">
-              Subscribe
-            </button>
-          </div>
-
-          <!-- divider -->
-          <div class="border border-dotted mt-2"></div>
-        </div>
-      </main>
 
       <!-- footer -->
       <footer class="mt-10 py-10 px-2 border-t-2">
@@ -381,7 +404,9 @@
           <!-- block 1 -->
           <div class="w-full mb-5 md:w-2/5">
             <div>
-              <h6 class="font-semibold text-gray-700 mb-4">Company</h6>
+              <h6 class="font-semibold text-gray-700 mb-4 dark:text-white">
+                Company
+              </h6>
               <ul>
                 <li><a href="#" class="footer-link">Team</a></li>
                 <li><a href="#" class="footer-link">About us</a></li>
@@ -392,7 +417,9 @@
           <!-- block 2 -->
           <div class="w-full mb-5 md:w-2/5">
             <div>
-              <h6 class="font-semibold text-gray-700 mb-4">Content</h6>
+              <h6 class="font-semibold text-gray-700 mb-4 dark:text-white">
+                Content
+              </h6>
               <ul>
                 <li>
                   <a class="footer-link" href="#">Block</a>
@@ -413,7 +440,9 @@
           <!-- block 3 -->
           <div class="w-full mb-5 md:w-2/5">
             <div>
-              <h6 class="font-semibold text-gray-700 mb-4">Contact us</h6>
+              <h6 class="font-semibold text-gray-700 mb-4 dark:text-white">
+                Contact us
+              </h6>
               <ul class="flex items-center">
                 <li>
                   <a class="footer-link" href="#">
